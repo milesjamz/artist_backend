@@ -13,5 +13,11 @@ def destroy
     artist.destroy
 end
 
+private
+
+def artist_params
+    params.require(:artist).permit(:name, :bio, :location, :image)
+end
+
 
 end
