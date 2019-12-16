@@ -18,4 +18,11 @@ def destroy
     artwork.destroy
 end
 
+private
+
+def artwork_params
+    params.require(:artwork).permit(:name, :description, :material, :date, :image)
+end
+
+
 end
